@@ -7,7 +7,7 @@ I have 4 different files which contain my biological read 1, biological read 2, 
 3.  Table for unknown sequences, to help diagnose sequencing errors.
 4. Maybe have a summary stats table? Total read pairs processed, Total matched index-pairs (all samples), Total index-hopped reads, Total unknown reads, Percent index-hopped, Percent unknown. Just for an overview
 
-
+### Pseudocode
 I would first argparse all 4 of my fastq files.Then I would globalize said variable.
 ```
     Say the variables are the following:
