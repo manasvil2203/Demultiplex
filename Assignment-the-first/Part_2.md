@@ -17,6 +17,7 @@ Say the variables are the following:
 
 
     I would make a set with all the valid indexes
+    
 I would also Initialize a bunch of things here...like:
     Initialize dictionary for counting the possible permuatations
 
