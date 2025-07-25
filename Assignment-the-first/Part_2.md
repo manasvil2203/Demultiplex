@@ -8,23 +8,24 @@ I have 4 different files which contain my biological read 1, biological read 2, 
 4. Maybe have a summary stats table? Total read pairs processed, Total matched index-pairs (all samples), Total index-hopped reads, Total unknown reads, Percent index-hopped, Percent unknown. Just for an overview
 
 
-I would first argparse all 4 of my fastq files.Then I would globalize said variable. 
-Say the variables are the following:
+I would first argparse all 4 of my fastq files.Then I would globalize said variable.
+```
+    Say the variables are the following:
     R1 - for bio read 1
     R2 - for index 1 
     R3 - for index 2
     R4 - for bio read 2
+```
 
+I would make a set with all the valid indexes
 
-    I would make a set with all the valid indexes
-    
-I would also Initialize a bunch of things here...like:
+I would also initialize things here...like:
+```
     Initialize dictionary for counting the possible permuatations
-
     Initialize file for index hopping R1 and R2
     Initialize file for unkown R1 and R2
-
-  
+```
+```
 Initialize dictionary for storing matched file handles
 
 def get_output_handles(index1: str, index2: str):
@@ -38,12 +39,15 @@ def get_output_handles(index1: str, index2: str):
     returns (r1_handle, r2_handle)
     Input: "ACGTA" "ACGTA"
     Output: (ACGTA_R1.fq, ACGTA_R1.fq )
-
+```
+```
   Initialize counters for:
             Each valid index-pair.
             Total index-hopped pairs.
             Total unknown pairs.
 
+```
+```
 Then I would open all 4 of my files using with open in the 'r' mode
     Then in a while True loop:
         I would read each record(so loop through 4 lines) of each file.
@@ -102,3 +106,4 @@ Then I would open all 4 of my files using with open in the 'r' mode
 
                 Increment unknown_count by 1
 
+```
