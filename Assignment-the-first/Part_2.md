@@ -16,8 +16,9 @@ I would first argparse all 4 of my fastq files.Then I would globalize said varia
     R3 - for index 2
     R4 - for bio read 2
 ```
-
+```
 I would make a set with all the valid indexes
+```
 
 I would also initialize things here...like:
 ```
