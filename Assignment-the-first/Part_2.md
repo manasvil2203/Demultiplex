@@ -107,4 +107,6 @@ Then I would open all 4 of my files using with open in the 'r' mode
 
                 Increment unknown_count by 1
 
+        Close my files
+
 ```
