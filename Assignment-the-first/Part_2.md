@@ -68,7 +68,7 @@ Then I would open all 4 of my files using with open in the 'r' mode
             Output: "TCGAC"
 
         Then I would modify both my Fastq headers and add my barcodes to the end in the order(index1- reverse compliment(index2)) 
-            Increment the dictionary using the barcode pair if it exists and add one if it does not exist.
+            Increment the permutations dictionary using the barcode pair if it exists and add one if it does not exist.
             
          Now I would check if my indexes are even part of the valid indexes
            
