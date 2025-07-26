@@ -17,7 +17,11 @@
         [dist_R3.png](./dist_R3.png)
         [dist_R4.png](./dist_R4.png)
    
-    2. Assuming the downstream analysis is for alignment, for my index reads, I only need them to be valid reads. For them to be valid reads, I just need them to be correctly sequenced, so no N base in the sequence. So I think the cutoff should be 2.For my biological reads, I would not have a cutoff. All my quality scores look pretty good and so if there are any bad quality, my aligner can deal with them.
+    2. Assuming the downstream analysis is for alignment, for my index reads, I only need them to be valid reads. For them to be valid reads, I just need them to be correctly sequenced, so no N base in the sequence. So I think the cutoff should be 2. Now, one could argue that even if it is read as valid index by my sequencer, it might be a mistake, what if it got some bases wrong and it just happened to be a valid sequence? Well...have you heard of something called Hamming distances?
+    Let me define it for you: For two strings of equal length, the Hamming distance is the number of characters that are different at the same position. So the higher the hamming distnce, the more chance that a low quality score will not impact my valid bases.Guess what? We have a pretty high hamming score ranging between 4-8. This means my index which is 8 bases long, will have to have at least 4 bases called wrong, so 50%, to be another valid sequence. Thus, I think it is safe to say that I a quality score of 2 is justified.
+
+
+    For my biological reads, I would not have a cutoff. All my quality scores look pretty good and so if there are any bad quality, my aligner can deal with them.
     3. zcat 1294_S1_L008_R2_001.fastq.gz| sed -n '2~2p'| grep "N" | wc -l (3976613)
        zcat 1294_S1_L008_R2_001.fastq.gz| sed -n '2~2p'| grep "N" | wc -l (3328051)
        zcat 1294_S1_L008_R2_001.fastq.gz 1294_S1_L008_R3_001.fastq.gz| sed -n '2~2p'| grep "N" | wc -l (7304664)
