@@ -1,0 +1,12 @@
+@matched_index1
+ACGATCAG
++
+IIIIIIII
+@unmatched_index1
+GTAGCGTA
++
+IIIIIIII
+@hopped_index1
+CGGTAATC
++
+IIIIIIII
