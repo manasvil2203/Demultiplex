@@ -1,0 +1,6 @@
+Okay, so it was impressive and weird at the same time. First, I did not know gen AI could produce files, so I am impressed. But of course, it needed a lot of detail. Here is the process I went through:
+1. Asked for input files. Specified I wanted three reocrds, and what I want each file to be, also gave the list of valid indexes.
+2. Worked, but the sequences were not reverse complemented. So, I specified that again. Though I should note that I did specify that hopped had to be from the valid indexes, but it still did it.
+3. Next, I moved to the output files, did not go well. Produced files but they were not correlated to my input files and when I asked it to, it wanted me to upload the input filed. But co pilot does not support fastq files, and then it asked me to copy paste the file contents instead....and I did not want to.
+4. So I combined my input and output prompt and asked it to produce the files at the same time. It worked! I double checked the indexes, it even gave me the right file names.
+5. I used Co-pilot.
